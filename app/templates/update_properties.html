@@ -907,11 +907,12 @@
         ================================================== -->
 
         <button
-            type="submit"
-            class="save-btn"
-        >
-            Save Changes
-        </button>
+    type="submit"
+    class="save-btn"
+    onclick="return confirmSaveChanges();"
+>
+    Save Changes
+</button>
 
     </form>
 
@@ -924,6 +925,10 @@
 /* =========================================================
    SINGLE FILE
 ========================================================= */
+
+function confirmSaveChanges() {
+    return confirm("Are you sure you want to save these changes?");
+}
 
 function showSelectedFile(inputId, messageId) {
 
